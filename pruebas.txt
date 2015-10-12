@@ -1,0 +1,22 @@
+>>> pattern = re.compile(r'\bfoo\b')
+>>> pattern.match("foo bar")
+<_sre.SRE_Match object at 0x7fa4c06dc4a8>
+>>> u"España"
+u'Espa\xf1a'
+>>> u"Nº"
+u'N\xba'
+>>> pattern = re.compile(r"(\d+)")
+>>> pattern.findall("117")
+['117']
+>>> pattern.findall("117 Prueba")
+
+
+
+>>> pattern = re.compile(r"(J-\d+)")
+>>> pattern.findall("J-15456373")
+['J-15456373']
+>>> pattern.findall("J-15456373 Prueba")
+['J-15456373']
+
+
+
